@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        sudo apt install -y tor iptables perl
+        sudo cpan install Switch JSON LWP::UserAgent Config::Simple
+        sudo cp .configs/debian-torrc /etc/tor/torrc
+        sudo chmod 644 /etc/tor/torrc
+        perl nipe.pl status

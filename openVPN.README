@@ -1,0 +1,22 @@
+#!/bin/bash
+#apt update && apt -y install wget ca-certificates net-tools
+
+##https://support.ipvanish.com/hc/en-us/articles/360002787473-How-to-Configure-OpenVPN-in-Kali-Linux-
+apt-get install -y openvpn
+##Finishing configuration using 'freevpn.me'
+##https://openvpn.net/vpn-server-resources/finishing-configuration-of-access-server/
+
+###***https://www.freeopenvpn.org/en/connect.php
+##https://freevpn.me/accounts/ ---for logins 
+cd ~/anonym/openvpn.utils/1\ -\ FreeVPN.me\ -\ FR
+openvpn FreeVPN.me-TCP443.ovpn
+##Enter
+#    Username: freevpn.me
+#    Password: ZdgIRETPPjHA
+
+##Features
+#    TCP 80, 443
+#    UDP 53, 40000
+#    Unlimited Bandwidth
+#    Torrents Allowed
+#    No Logging
